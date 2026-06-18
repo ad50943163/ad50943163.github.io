@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heartopia 心动小镇攻略站 — 萌新入坑 · 每日必做 · 赚钱路线</title>
+<meta name="description" content="Heartopia（心动小镇）最全中文攻略 — 萌新入坑指南、每日必做清单、赚钱攻略、爱好解锁顺序、鱼类昆虫图鉴速查。">
+<style>
+/* ========== CSS Variables ========== */
+:root {
+  --coral:        #FF7B5A;
+  --coral-dark:   #E85D3A;
+  --coral-light:  #FFECE5;
+  --orange:       #FFA940;
+  --gold:         #FADB14;
+  --sky:          #69C0FF;
+  --sky-light:    #E6F7FF;
+  --green:        #73D13D;
+  --green-light:  #F0FBE6;
+  --leaf:         #95DE64;
+  --cream:        #FFF9F2;
+  --card-bg:      #FFFFFF;
+  --text:         #3D2E1C;
+  --text-secondary: #7A6858;
+  --text-muted:   #A89888;
+  --border:       #F0E6DA;
+  --border-light: #FAF3EA;
+  --shadow-sm:    0 2px 8px rgba(61,46,28,0.06);
+  --shadow-md:    0 4px 16px rgba(61,46,28,0.10);
+  --shadow-lg:    0 8px 32px rgba(61,46,28,0.12);
+  --radius-sm:    8px;
+  --radius-md:    14px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+  --max-width:    880px;
+}
+
+/* ========== Reset & Base ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--coral); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+/* ========== Header ========== */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px;
+}
+
+.top-bar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--coral);
+}
+.logo-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--coral-light);
+  color: var(--coral);
+  text-decoration: none;
+}
+
+/* ========== Hero ========== */
+.hero {
+  text-align: center;
+  padding: 48px 16px 36px;
+}
+.hero-emoji {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+.hero h1 span {
+  color: var(--coral);
+}
+.hero .subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+.hero .version-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 14px;
+  background: var(--sky-light);
+  color: var(--sky);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ========== Quick Nav Cards ========== */
+.quick-nav {
+  max-width: var(--max-width);
+  margin: 0 auto 40px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+.quick-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s;
+  border: 2px solid transparent;
+}
+.quick-nav-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--coral-light);
+  text-decoration: none;
+}
+.quick-nav-card .icon { font-size: 32px; line-height: 1; }
+.quick-nav-card .label { font-size: 13px; font-weight: 600; }
+
+/* ========== Main Content ========== */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+
+/* ========== Section ========== */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.section-header .emoji { font-size: 28px; line-height: 1; }
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+.section-header .badge {
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--coral-light);
+  color: var(--coral);
+}
+
+/* ========== Cards ========== */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.card-body {
+  padding: 24px;
+}
+.card-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-header .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ========== Step List ========== */
+.step-list {
+  list-style: none;
+}
+.step-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.step-list li:last-child { border-bottom: none; }
+.step-list .step-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 40px;
+  text-align: center;
+}
+.step-list .step-body h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.step-list .step-body p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ========== Checklist ========== */
+.checklist { list-style: none; }
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 15px;
+}
+.checklist li:hover { background: var(--cream); }
+.checklist li:last-child { border-bottom: none; }
+.checklist li.done { color: var(--text-muted); }
+.checklist li.done .check-box {
+  background: var(--green);
+  border-color: var(--green);
+}
+.checklist li.done .check-box::after {
+  content: "✓";
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+.check-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.check-tag {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.tag-must { background: #FFF1F0; color: #F5222D; }
+.tag-important { background: #FFF7E6; color: #FA8C16; }
+.tag-optional { background: #F6FFED; color: #52C41A; }
+
+/* ========== Table ========== */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+thead th {
+  text-align: left;
+  padding: 12px 16px;
+  background: var(--cream);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  border-bottom: 2px solid var(--border);
+}
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+tbody tr:hover { background: var(--cream); }
+.stars { color: var(--orange); letter-spacing: 1px; white-space: nowrap; }
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.tag-green { background: #F0FBE6; color: #52C41A; }
+.tag-blue { background: #E6F7FF; color: #1890FF; }
+.tag-orange { background: #FFF7E6; color: #FA8C16; }
+.tag-purple { background: #F9F0FF; color: #722ED1; }
+
+/* ========== Info Box ========== */
+.info-box {
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.info-tip {
+  background: #FFFBE6;
+  border-left: 4px solid var(--gold);
+}
+.info-warn {
+  background: #FFF1F0;
+  border-left: 4px solid #F5222D;
+}
+.info-good {
+  background: var(--green-light);
+  border-left: 4px solid var(--green);
+}
+.info-box strong { color: inherit; }
+
+/* ========== Priority Chart ========== */
+.priority-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.priority-step {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.priority-step.best {
+  border-color: var(--green);
+  background: var(--green-light);
+  color: #389E0D;
+}
+.priority-arrow {
+  font-size: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ========== Accordion (纯 CSS) ========== */
+.accordion { margin: 4px 0; }
+.accordion-trigger {
+  display: none;
+}
+.accordion-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s;
+  user-select: none;
+}
+.accordion-label:hover { border-color: var(--coral); }
+.accordion-label::after {
+  content: "▾";
+  font-size: 14px;
+  transition: transform 0.3s;
+  color: var(--text-muted);
+}
+.accordion-trigger:checked + .accordion-label::after {
+  transform: rotate(180deg);
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.accordion-trigger:checked + .accordion-label + .accordion-body {
+  max-height: 2000px;
+  padding: 16px 0 8px;
+}
+
+/* ========== Footer ========== */
+.footer {
+  text-align: center;
+  padding: 40px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.footer a { color: var(--coral); }
+
+/* ========== Back to Top ========== */
+.back-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+.back-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-top:hover { background: var(--coral-dark); transform: translateY(-3px); }
+
+/* ========== Responsive ========== */
+@media (max-width: 640px) {
+  .hero { padding: 32px 16px 24px; }
+  .hero h1 { font-size: 26px; }
+  .hero-emoji { font-size: 48px; }
+  .quick-nav { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .quick-nav-card { padding: 12px 8px; }
+  .quick-nav-card .icon { font-size: 24px; }
+  .quick-nav-card .label { font-size: 11px; }
+  .card-body { padding: 16px; }
+  .section-header h2 { font-size: 20px; }
+  .nav-links a { padding: 5px 10px; font-size: 12px; }
+  .priority-flow { gap: 4px; }
+  .priority-step { padding: 8px 10px; font-size: 12px; }
+  .priority-arrow { font-size: 16px; }
+}
+
+/* ========== Checklist JS ========== */
+.checklist li.done .check-box { background: var(--green); border-color: var(--green); }
+</style>
+</head>
+<body>
+
+<!-- ==================== Header ==================== -->
+<header class="top-bar">
+  <div class="top-bar-inner">
+    <a href="#" class="logo" style="text-decoration:none;">
+      <span class="logo-icon">🏝️</span> Heartopia攻略
+    </a>
+    <nav class="nav-links">
+      <a href="#newbie">萌新指南</a>
+      <a href="#daily">每日清单</a>
+      <a href="#money">赚钱</a>
+      <a href="#hobby">爱好</a>
+      <a href="#quick">速查</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== Hero ==================== -->
+<section class="hero">
+  <div class="hero-emoji">🏖️</div>
+  <h1>Heartopia <span>心动小镇</span> 攻略站</h1>
+  <p class="subtitle">萌新入坑 · 每日必做 · 赚钱路线 · 爱好推荐 · 速查图鉴</p>
+  <div class="version-badge">📅 持续更新 · 当前版本适配中</div>
+</section>
+
+<!-- ==================== Quick Nav ==================== -->
+<nav class="quick-nav">
+  <a href="#newbie" class="quick-nav-card">
+    <span class="icon">🌱</span>
+    <span class="label">萌新入坑</span>
+  </a>
+  <a href="#daily" class="quick-nav-card">
+    <span class="icon">📋</span>
+    <span class="label">每日清单</span>
+  </a>
+  <a href="#money" class="quick-nav-card">
+    <span class="icon">💰</span>
+    <span class="label">赚钱攻略</span>
+  </a>
+  <a href="#hobby" class="quick-nav-card">
+    <span class="icon">⭐</span>
+    <span class="label">爱好顺序</span>
+  </a>
+  <a href="#stamina" class="quick-nav-card">
+    <span class="icon">⚡</span>
+    <span class="label">体力管理</span>
+  </a>
+  <a href="#quick" class="quick-nav-card">
+    <span class="icon">🔍</span>
+    <span class="label">速查工具</span>
+  </a>
+</nav>
+
+<!-- ==================== Main Content ==================== -->
+<main class="main-content">
+
+  <!-- ====== 萌新入坑指南 ====== -->
+  <section class="section" id="newbie">
+    <div class="section-header">
+      <span class="emoji">🌱</span>
+      <h2>萌新入坑 7 天指南</h2>
+      <span class="badge">必读</span>
+    </div>
+
+    <div class="info-box info-tip">
+      <strong>💡 核心思路：</strong>Heartopia 没有强制打卡，但<strong>前7天的选择会极大影响后续体验</strong>。跟着主线走→解锁爱好→建立赚钱循环，就是最优路径。
+    </div>
+
+    <!-- Day 1-2 -->
+    <div class="card">
+      <div class="card-header"><span class="step-num">1</span> 第1-2天：推主线 + 领奖励</div>
+      <div class="card-body">
+        <ul class="step-list">
+          <li>
+            <span class="step-icon">📦</span>
+            <div class="step-body">
+              <h4>领取所有开服/预约奖励</h4>
+              <p>打开邮箱 → 领取月光水晶(400)、展览券(60)、愿望星(20)、金币(4000)。这些是前期最重要的资源。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">📖</span>
+            <div class="step-body">
+              <h4>全力推进主线任务</h4>
+              <p>主线解锁<strong>约90%的核心功能</strong>——包括钓鱼、园艺、制作、建造平板。不做主线 = 锁死大部分内容。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🛏️</span>
+            <div class="step-body">
+              <h4>优先放置基础家具</h4>
+              <p>床（恢复体力）、工作台（制作）、烤箱（烹饪）、浴缸 — 这四件是前期最重要的家具。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🚗</span>
+            <div class="step-body">
+              <h4>领取免费载具</h4>
+              <p>前期会送<strong>小摩托</strong>，开服奖励还有<strong>白色轿车</strong>。走路虽浪漫，但地图巨大，有车效率翻倍。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 3-5 -->
+    <div class="card">
+      <div class="card-header"><span class="step-num">2</span> 第3-5天：解锁爱好 + 建立收入</div>
+      <div class="card-body">
+        <ul class="step-list">
+          <li>
+            <span class="step-icon">🎣</span>
+            <div class="step-body">
+              <h4>完成钓鱼+园艺教程（强制解锁）</h4>
+              <p>钓鱼导师 Vanya、园艺导师 Blanc 会带你入门。这两项是赚钱的基础。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🍳</span>
+            <div class="step-body">
+              <h4>DG等级达标后，第一张爱好券解锁<strong>烹饪</strong></h4>
+              <p>烹饪是最关键的爱好——把种的菜、钓的鱼做成菜肴，售价翻倍，还能高效回体力。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🌾</span>
+            <div class="step-body">
+              <h4>种田 → 收菜 → 做成菜 → 卖掉 = 第一桶金</h4>
+              <p>不要卖原材料！苹果做成苹果酱、鱼做成烤鱼，利润差3-5倍。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 6-7 -->
+    <div class="card">
+      <div class="card-header"><span class="step-num">3</span> 第6-7天：稳定日常 + 扩展玩法</div>
+      <div class="card-body">
+        <ul class="step-list">
+          <li>
+            <span class="step-icon">📋</span>
+            <div class="step-body">
+              <h4>每天完成居民委托（DG等级关键来源）</h4>
+              <p>居民会要你拍照、交材料、钓鱼。完成委托 = DG经验 + 贡献徽章，徽章能换家具和服装。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🦋</span>
+            <div class="step-body">
+              <h4>DG等级6：解锁第二个爱好 — 推荐捕虫</h4>
+              <p>捕虫门槛低、收集乐趣大，且能和烹饪联动（部分菜品需要虫类材料）。</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-icon">🏠</span>
+            <div class="step-body">
+              <h4>每天逛商店（家具+服装每日刷新）</h4>
+              <p>限量家具和稀有服装可能只出现一次，看到喜欢的果断拿下。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 每日必做清单 ====== -->
+  <section class="section" id="daily">
+    <div class="section-header">
+      <span class="emoji">📋</span>
+      <h2>每日必做清单</h2>
+      <span class="badge">交互式</span>
+    </div>
+    <div class="info-box info-good">
+      <strong>✅ 点击每一项可以标记完成。</strong>每天重置刷新。按优先级排序，时间不够从最上面开始做。
+    </div>
+
+    <div class="card">
+      <div class="card-body" style="padding:8px 0;">
+        <ul class="checklist" id="dailyChecklist">
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            领取每日签到奖励
+            <span class="check-tag tag-must">必做</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            完成所有居民委托（DG经验主要来源）
+            <span class="check-tag tag-must">必做</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            每日任务清完（贡献徽章+金币）
+            <span class="check-tag tag-must">必做</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            收菜 + 种新菜（种田循环不能断）
+            <span class="check-tag tag-important">重要</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            逛家具店+服装店（每日刷新）
+            <span class="check-tag tag-important">重要</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            采集稀有物资：溜溜橡木、无暇萤石（24h刷新）
+            <span class="check-tag tag-important">重要</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            戳地图上的泡泡（随机金币/材料/服装）
+            <span class="check-tag tag-optional">顺手</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            跟好友互动（浇水/共建/聊天）
+            <span class="check-tag tag-optional">社交</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            完成每周任务（周刷新，奖励可观）
+            <span class="check-tag tag-optional">每周</span>
+          </li>
+          <li onclick="this.classList.toggle('done')">
+            <span class="check-box"></span>
+            钓鱼/捕虫/观鸟（按当前爱好进度来）
+            <span class="check-tag tag-optional">自由</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 赚钱攻略 ====== -->
+  <section class="section" id="money">
+    <div class="section-header">
+      <span class="emoji">💰</span>
+      <h2>赚钱攻略 &amp; 收益对比</h2>
+    </div>
+
+    <div class="info-box info-warn">
+      <strong>⚠️ 新手最常见的错误：</strong>把原材料直接卖掉。永远记住——<strong>先加工，再出售</strong>。苹果 → 苹果酱，鱼 → 烤鱼，利润差3-5倍。
+    </div>
+
+    <div class="card">
+      <div class="card-header">📊 赚钱方法收益对比</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>方法</th>
+              <th>效率评级</th>
+              <th>门槛</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🌾 种田 + 卖菜</td>
+              <td><span class="stars">⭐⭐⭐⭐⭐</span></td>
+              <td><span class="tag tag-green">极低</span></td>
+              <td>最稳定收入源。作物品质随种植次数提升，不需要肥料也能出高品质。推荐优先种<strong>高价值作物</strong>。</td>
+            </tr>
+            <tr>
+              <td>🍳 烹饪 + 卖菜</td>
+              <td><span class="stars">⭐⭐⭐⭐</span></td>
+              <td><span class="tag tag-blue">需解锁烹饪</span></td>
+              <td>种田+烹饪联动 = <strong>最佳赚钱循环</strong>。高品质菜肴售价可观，低品质自己吃回体力。</td>
+            </tr>
+            <tr>
+              <td>🎣 钓鱼出售</td>
+              <td><span class="stars">⭐⭐⭐</span></td>
+              <td><span class="tag tag-green">教程解锁</span></td>
+              <td>高星级鱼直接卖，低星级做成料理再卖。注意稀有鱼有时间+天气限制。</td>
+            </tr>
+            <tr>
+              <td>📋 每日/每周任务</td>
+              <td><span class="stars">⭐⭐⭐</span></td>
+              <td><span class="tag tag-green">无</span></td>
+              <td>稳定贡献徽章+金币，性价比最高的<strong>固定收入</strong>。</td>
+            </tr>
+            <tr>
+              <td>🫧 戳地图泡泡</td>
+              <td><span class="stars">⭐⭐</span></td>
+              <td><span class="tag tag-green">无</span></td>
+              <td>随机出金币、材料、服装、蓝图。路过顺手戳，不专门找。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">🔄 赚钱闭环（推荐路线）</div>
+      <div class="card-body">
+        <div class="priority-flow">
+          <span class="priority-step best">种田</span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step best">收菜</span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step best">烹饪加工</span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step">高品质 → 卖掉</span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step">低品质 → 回体力</span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step best">继续种田</span>
+        </div>
+        <p style="margin-top:16px;font-size:14px;color:var(--text-secondary);text-align:center;">
+          卖东西找 <strong>Albert Jr.</strong>，按住物品可以批量出售省时间。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 爱好解锁顺序 ====== -->
+  <section class="section" id="hobby">
+    <div class="section-header">
+      <span class="emoji">⭐</span>
+      <h2>爱好解锁顺序推荐</h2>
+    </div>
+
+    <div class="info-box info-tip">
+      <strong>💡 核心逻辑：</strong>爱好券有限，解锁顺序决定了前期体验。<strong>优先解锁能帮你赚钱的爱好</strong>，再用赚到的钱支持收集类爱好。
+    </div>
+
+    <div class="card">
+      <div class="card-header">🗺️ 推荐解锁路线</div>
+      <div class="card-body">
+        <div class="priority-flow">
+          <span class="priority-step best">🎣 钓鱼<br><small>教程强制</small></span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step best">🌱 园艺<br><small>教程强制</small></span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step best">🍳 烹饪<br><small>第1张券</small></span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step">🦋 捕虫<br><small>DG Lv.6</small></span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step">🐦 观鸟<br><small>后续解锁</small></span>
+          <span class="priority-arrow">→</span>
+          <span class="priority-step">🐱🐶 养宠<br><small>DG Lv.12</small></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">📝 各爱好详解</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>爱好</th>
+              <th>解锁时机</th>
+              <th>推荐理由</th>
+              <th>小提示</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🎣 钓鱼</td>
+              <td>教程强制</td>
+              <td>基础收入来源，不同水域+天气+时间出不同鱼</td>
+              <td>稀有鱼在图鉴里查刷新条件</td>
+            </tr>
+            <tr>
+              <td>🌱 园艺</td>
+              <td>教程强制</td>
+              <td>最稳定金币来源，作物品质越种越高</td>
+              <td>不需要肥料也能出高品质</td>
+            </tr>
+            <tr>
+              <td>🍳 烹饪</td>
+              <td><span class="tag tag-green">第1优先</span></td>
+              <td>加工食材售价翻倍、高效回体力、送礼</td>
+              <td>先做水果酱类，利润最高</td>
+            </tr>
+            <tr>
+              <td>🦋 捕虫</td>
+              <td>DG Lv.6</td>
+              <td>门槛低、和烹饪联动、收集乐趣大</td>
+              <td>潜行靠近再用气泡网</td>
+            </tr>
+            <tr>
+              <td>🐦 观鸟</td>
+              <td>后续解锁</td>
+              <td>纯收集向，佛系拍照</td>
+              <td>不同区域出不同鸟类</td>
+            </tr>
+            <tr>
+              <td>🐱🐶 养宠</td>
+              <td>DG Lv.12</td>
+              <td>撸猫撸狗、跨品种繁育</td>
+              <td>可领养多只、繁育新花色</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 体力管理 ====== -->
+  <section class="section" id="stamina">
+    <div class="section-header">
+      <span class="emoji">⚡</span>
+      <h2>体力/能量管理</h2>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>恢复方式</th>
+                <th>效率</th>
+                <th>花费</th>
+                <th>适用场景</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🛏️ 在家睡觉</td>
+                <td>每5秒回1点（慢）</td>
+                <td>免费</td>
+                <td>休闲挂机、下线前</td>
+              </tr>
+              <tr>
+                <td>🍳 吃食物</td>
+                <td><strong>即时恢复</strong>（快）</td>
+                <td>消耗食物</td>
+                <td>深度挖矿、长时间钓鱼</td>
+              </tr>
+              <tr>
+                <td>♨️ 温泉泡澡</td>
+                <td>中等速度</td>
+                <td>免费</td>
+                <td>社交+回体两不误</td>
+              </tr>
+              <tr>
+                <td>🔄 每日6:00重置</td>
+                <td>自动回满</td>
+                <td>免费</td>
+                <td>每天一次固定福利</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box info-tip" style="margin-top:16px;">
+          <strong>🔥 前期策略：</strong>睡觉免费回体，把食物留给高消耗活动（挖矿、长途钓鱼）。烹饪爱好解锁后，做菜回体效率翻倍。
+        </div>
+        <div class="info-box info-good">
+          <strong>✅ 不消耗体力的活动：</strong>走路、社交、建造、手动采摘浆果/蘑菇、拍照。体力用完也有事可做。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 速查工具区 ====== -->
+  <section class="section" id="quick">
+    <div class="section-header">
+      <span class="emoji">🔍</span>
+      <h2>常见问题速查</h2>
+    </div>
+
+    <!-- FAQ 折叠面板 -->
+    <div class="accordion">
+      <input type="checkbox" id="faq1" class="accordion-trigger">
+      <label for="faq1" class="accordion-label">🐟 鱼在哪儿钓？稀有鱼怎么出？</label>
+      <div class="accordion-body">
+        <p style="font-size:14px;line-height:1.8;">
+          Heartopia 的鱼类分布在<strong>河流、湖泊、海洋</strong>三种水域，稀有鱼还需要满足<strong>特定天气 + 时间段</strong>条件。
+          彩虹天气（同时满足晴天和雨天刷新池）是最佳钓鱼时机。具体每只鱼的条件请在解锁钓鱼后查看游戏内图鉴。
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <input type="checkbox" id="faq2" class="accordion-trigger">
+      <label for="faq2" class="accordion-label">🏠 怎么跟好友一起玩？共建模式怎么开？</label>
+      <div class="accordion-body">
+        <p style="font-size:14px;line-height:1.8;">
+          <strong>加好友：</strong>通过UID搜索添加，花费1个愿望星发送好友请求。<br>
+          <strong>共建模式：</strong>DG等级到达8级后解锁，可以邀请一位好友在你的家园地块上实时共建。<br>
+          <strong>私人小镇：</strong>花费月光水晶/钻石之心创建，只有你和好友能进入。
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <input type="checkbox" id="faq3" class="accordion-trigger">
+      <label for="faq3" class="accordion-label">⚡ DG等级怎么快速提升？</label>
+      <div class="accordion-body">
+        <p style="font-size:14px;line-height:1.8;">
+          DG（发展家等级）是游戏最核心的进度系统。提升方式：<br>
+          ① <strong>每天完成居民委托</strong>——主要经验来源，尽量全部做完<br>
+          ② <strong>每日/每周任务</strong>——奖励贡献徽章<br>
+          ③ <strong>主线任务</strong>——前期一次性大量经验<br>
+          DG等级解锁：新爱好、新家具、背包扩容、蓝图(Lv.8)、共建(Lv.8)等。
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <input type="checkbox" id="faq4" class="accordion-trigger">
+      <label for="faq4" class="accordion-label">🛠️ 工具坏了怎么办？</label>
+      <div class="accordion-body">
+        <p style="font-size:14px;line-height:1.8;">
+          工具设计为<strong>可修复</strong>的，不需要重新购买。使用<strong>维修套件（Repair Kit）</strong>即可修复。
+          维修套件可以通过签到奖励、任务奖励获得，也可以在商店购买。每件工具都有自己的耐久值，耐久归零前修好就行。
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <input type="checkbox" id="faq5" class="accordion-trigger">
+      <label for="faq5" class="accordion-label">🎯 蓝图是什么？怎么用？</label>
+      <div class="accordion-body">
+        <p style="font-size:14px;line-height:1.8;">
+          <strong>DG等级8解锁蓝图功能。</strong>蓝图允许你：<br>
+          ① 保存多套房屋设计方案，随时切换<br>
+          ② 在不同地块上建造，每个地块独立保存<br>
+          ③ 购买社区蓝图直接套用（不用自己设计）<br>
+          这是建造党的核心功能，建议尽早冲到DG 8。
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ==================== Footer ==================== -->
+<footer class="footer">
+  <p>🏝️ Heartopia 心动小镇攻略站 · MVP v0.1</p>
+  <p style="margin-top:4px;">内容持续更新中 · 如有错误欢迎反馈</p>
+  <p style="margin-top:8px;">
+    <a href="#">回到顶部</a> ·
+    <a href="#newbie">萌新指南</a> ·
+    <a href="#daily">每日清单</a> ·
+    <a href="#money">赚钱攻略</a>
+  </p>
+</footer>
+
+<!-- ==================== Back to Top ==================== -->
+<a href="#" class="back-top" id="backTop" title="回到顶部">↑</a>
+
+<script>
+// Back to Top visibility
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backTop.classList.add('visible');
+  } else {
+    backTop.classList.remove('visible');
+  }
+});
+
+// Persist checklist state in localStorage
+(function() {
+  const list = document.getElementById('dailyChecklist');
+  const key = 'heartopia_daily_checklist';
+
+  // Load saved state
+  try {
+    const saved = JSON.parse(localStorage.getItem(key) || '[]');
+    const items = list.querySelectorAll('li');
+    saved.forEach((done, i) => {
+      if (done && items[i]) items[i].classList.add('done');
+    });
+  } catch(e) {}
+
+  // Save state on click
+  list.addEventListener('click', () => {
+    try {
+      const items = list.querySelectorAll('li');
+      const state = Array.from(items).map(li => li.classList.contains('done'));
+      localStorage.setItem(key, JSON.stringify(state));
+    } catch(e) {}
+  });
+})();
+</script>
+
+</body>
+</html>
